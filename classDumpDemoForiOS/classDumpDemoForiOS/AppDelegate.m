@@ -13,8 +13,11 @@
 #include <mach-o/dyld_images.h>
 #include <mach/mach.h>
 #include <mach-o/dyld_images.h>
-#include <mach/mach_vm.h>
+
+//#include <mach/mach_vm.h>
 #include <dlfcn.h>
+
+extern struct dyld_all_image_infos _dyld_get_all_image_infos();
 
 @interface AppDelegate ()
 
@@ -25,6 +28,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+
+
+//    imagePathForClassName(@"NSObject");
     return YES;
 }
 
@@ -55,27 +61,6 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
-NSString *imagePathForClassName(NSString *className){
 
-    NSString *imagePath=NULL;
-    unsigned int count=0;
-
-    dyld_all_image_infos info=  _dyld_get_all_image_infos();
-    dyld_all_image_infos info1= __dyld_get_all_image_infos();
-    for(int i=0; i<dyld_all_image_infos->infoArrayCount; i++) {
-        if (dyld_all_image_infos->infoArray[i].imageLoadAddress!=NULL){
-            char *currentImage=(char *)dyld_all_image_infos->infoArray[i].imageFilePath;
-            const char **names = objc_copyClassNamesForImage((const char *)currentImage,&count);
-            for (int i=0; i<count; i++){
-                const char *clsname=names[i];
-                if (!strcmp([className  UTF8String],clsname)){
-                    imagePath=[NSString stringWithCString:currentImage encoding:NSUTF8StringEncoding ];
-                    break;
-                }
-            }
-        }
-    }
-    return imagePath;
-}
 
 @end

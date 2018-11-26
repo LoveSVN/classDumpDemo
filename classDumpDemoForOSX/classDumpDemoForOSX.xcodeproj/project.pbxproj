@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A0918A3021ABD1BD00330DBC /* libSystem.B.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A0918A2F21ABD1BD00330DBC /* libSystem.B.tbd */; };
 		A0FA271421AA4E89008818E9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A0FA271321AA4E89008818E9 /* AppDelegate.m */; };
 		A0FA271621AA4E8A008818E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0FA271521AA4E8A008818E9 /* Assets.xcassets */; };
 		A0FA271921AA4E8A008818E9 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0FA271721AA4E8A008818E9 /* MainMenu.xib */; };
@@ -17,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A0918A2F21ABD1BD00330DBC /* libSystem.B.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libSystem.B.tbd; path = usr/lib/libSystem.B.tbd; sourceTree = SDKROOT; };
+		A0918A3221ABD5E600330DBC /* libdyld.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libdyld.tbd; path = usr/lib/system/libdyld.tbd; sourceTree = SDKROOT; };
 		A0FA270F21AA4E89008818E9 /* classDumpDemoForOSX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = classDumpDemoForOSX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0FA271221AA4E89008818E9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A0FA271321AA4E89008818E9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -38,17 +41,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0918A3021ABD1BD00330DBC /* libSystem.B.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A0918A2921ABCF0100330DBC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A0918A3221ABD5E600330DBC /* libdyld.tbd */,
+				A0918A2F21ABD1BD00330DBC /* libSystem.B.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A0FA270621AA4E89008818E9 = {
 			isa = PBXGroup;
 			children = (
 				A0FA271121AA4E89008818E9 /* classDumpDemoForOSX */,
 				A0FA271021AA4E89008818E9 /* Products */,
+				A0918A2921ABCF0100330DBC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -302,6 +316,11 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SDKROOT)/usr/lib/system",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = wifi.com.classDumpDemoForOSX;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -319,6 +338,11 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SDKROOT)/usr/lib/system",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = wifi.com.classDumpDemoForOSX;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

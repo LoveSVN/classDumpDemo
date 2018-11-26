@@ -35,6 +35,7 @@
 		A0FA270021AA4C57008818E9 /* NSObject+DunmClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+DunmClass.m"; sourceTree = "<group>"; };
 		A0FA270121AA4C57008818E9 /* CommonFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonFunctions.h; sourceTree = "<group>"; };
 		A0FA270221AA4C57008818E9 /* ParsingFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParsingFunctions.m; sourceTree = "<group>"; };
+		A0FA275021ABB780008818E9 /* Xcode.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; name = Xcode.app; path = ../../../../../Applications/Xcode.app; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +54,7 @@
 			children = (
 				A0FA26E521AA4C0B008818E9 /* classDumpDemoForiOS */,
 				A0FA26E421AA4C0B008818E9 /* Products */,
+				A0FA274F21ABB77F008818E9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -93,6 +95,14 @@
 			);
 			path = classDump;
 			sourceTree = SOURCE_ROOT;
+		};
+		A0FA274F21ABB77F008818E9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A0FA275021ABB780008818E9 /* Xcode.app */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 

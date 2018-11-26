@@ -1,5 +1,9 @@
 # classDumpDemo
 三种都实现以下效果，classDumpDemoForiOS和classDumpDemoForOSX都是我自己改的，核心代码来自class-dump。PrivateMethodGetClassForiOS是我发现的NSObject私有方法实现的，其私有方法来自UIKitCore的NSObject(IvarDescription)
+
+
+
+
 ````````
 in UIViewController:
 	Class Methods:

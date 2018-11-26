@@ -23,6 +23,11 @@
     NSString *currentClassMethodDes = [self performSelector:@selector(__methodDescriptionForClass:) withObject:[UIViewController class]];
 
     NSLog(@"%@",currentClassMethodDes);
+
+    IMP Fromedec = [NSObject instanceMethodForSelector:@selector(__methodDescriptionForClass:)];
+
+    NSString *path = [NSBundle bundleForClass:[NSObject class]];
+
     ///!!!:以下私有方法自己尝试看效果
 //    NSString *currentClassIvarDes = [self performSelector:@selector(__ivarDescriptionForClass:) withObject:[UIViewController class]];
 //

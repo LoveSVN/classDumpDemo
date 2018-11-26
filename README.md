@@ -1,5 +1,6 @@
 # classDumpDemo
 三种都实现以下效果，classDumpDemoForiOS和classDumpDemoForOSX都是我自己改的，核心代码来自class-dump。PrivateMethodGetClassForiOS是我发现的NSObject私有方法实现的，其私有方法来自UIKitCore的NSObject(IvarDescription)
+````````
 in UIViewController:
 	Class Methods:
 		+ (id) fallback_debugHierarchyChildGroupingID; (0x11025370a)
@@ -416,3 +417,4 @@ in UIViewController:
 		- (id) tabBarController; (0x113b8dff2)
 		- (void) _willChangeToIdiom:(long)arg1 onScreen:(id)arg2; (0x113b70440)
 		- (id)
+````````
